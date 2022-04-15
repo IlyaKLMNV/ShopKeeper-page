@@ -1,12 +1,16 @@
 body{
     span{font-weight: 600;}
-    background-color: #f7fcff;}
+    background-color: #f7fcff;
+}
 
 .wrapper {
-    margin: 2%;
+
 }
 .container {
-    // width: 80%; а как отцентровать?
+    max-width: 80%;
+    transform: translate(-50%,0px);
+    position:relative;
+    left: 50%;
 }
 .psevdo-header {
 }
@@ -14,41 +18,56 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: #000000 1px solid;
         img{height: 50px;
             width: 50px;
-            margin: 0px 0px 0px 0px;
-            // flex:1 0 50%; does not work
-            border: #000 1px solid;}
+            margin: 0px 0px 0px 10px;}
         a{font-size: 20px;
             flex:1 0 50%;
-            // border: #f7fcff -1px solid;does not work
             border-radius: 10px;
             outline: hidden;
-            padding: 10px;
+            padding: 10px 20px;
             background: #4a8cea;
             color:rgb(255, 255, 255);
-            border: #000 1px solid;} 
+            margin: 0px 10px 0px 0px;
+} 
 }
 .psevdo-header__bottom-part {
-    background: url('../img/BackGround1.png') 0 0 / 100%;
+    background: url('../img/box-main.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+    ::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+        opacity: 0.1;
+        z-index: -1;
+    }
+}
+    .psevdo-header__bottompart2 {  
+        padding: 30px 10%;
+        
         div:nth-child(1){
             font-size: 25px;
             color:rgb(255, 255, 255);
-            padding: 20px 0px 70px 5%;
+            
         }
         div:nth-child(2){
             font-size: 50px;
             color:rgb(255, 255, 255);
-            padding: 20px 0px 40px 5%;
-            font-weight: 500;
+            font-weight: 700;
         }
         div:nth-child(3){
-            font-size: 25px;
+            font-size: 75px;
             color:rgb(255, 255, 255);
-            padding: 20px 0px 30px 5%;
         }
-}
+    }
 
 .psevdo-body__part1 {
         p:nth-child(1){
