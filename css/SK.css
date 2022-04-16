@@ -13,7 +13,7 @@ body span {
   left: 50%;
 }
 
-.psevdo-header__top-part {
+.pseudo-header__top-part {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,12 +24,12 @@ body span {
       -ms-flex-align: center;
           align-items: center;
 }
-.psevdo-header__top-part img {
+.pseudo-header__top-part img {
   height: 50px;
   width: 50px;
-  margin: 0px 0px 0px 10px;
+  margin-left: 10px;
 }
-.psevdo-header__top-part a {
+.pseudo-header__top-part a {
   font-size: 20px;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
@@ -39,18 +39,20 @@ body span {
   padding: 10px 20px;
   background: #4a8cea;
   color: white;
-  margin: 0px 10px 0px 0px;
+  margin: 0px 10px 0px 20px;
 }
 
-.psevdo-header__bottom-part {
+.pseudo-header__bottom-part {
   background: url("../img/box-main.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   position: relative;
   z-index: 1;
+  padding: 0px 10%;
+  margin: 0px 0 30px 0px;
 }
-.psevdo-header__bottom-part ::after {
+.pseudo-header__bottom-part ::after {
   position: absolute;
   content: "";
   top: 0;
@@ -58,57 +60,66 @@ body span {
   right: 0;
   bottom: 0;
   background-color: #000;
-  opacity: 0.1;
+  opacity: 0.2;
   z-index: -1;
 }
-
-.psevdo-header__bottompart2 {
-  padding: 30px 10%;
-}
-.psevdo-header__bottompart2 div:nth-child(1) {
+.pseudo-header__bottom-part div:nth-child(1) {
+  padding-top: 10px;
   font-size: 25px;
   color: white;
+  line-height: 30px;
+  font-family: "Comfortaa", cursive;
 }
-.psevdo-header__bottompart2 div:nth-child(2) {
+.pseudo-header__bottom-part div:nth-child(2) {
   font-size: 50px;
   color: white;
   font-weight: 700;
+  font-family: "Sawarabi Gothic", sans-serif;
+  line-height: 60px;
+  letter-spacing: 0px;
+  padding: 10px 0;
 }
-.psevdo-header__bottompart2 div:nth-child(3) {
-  font-size: 75px;
+.pseudo-header__bottom-part div:nth-child(3) {
+  padding-bottom: 10px;
+  font-size: 20px;
   color: white;
+  font-family: "Nunito", sans-serif;
+  line-height: 30px;
+  letter-spacing: 1px;
 }
 
-.psevdo-body__part1 p:nth-child(1) {
+.pseudo-body__part1 p:nth-child(1) {
+  padding-bottom: 20px;
   text-align: center;
   line-height: 30px;
-  font-size: 20px;
-}
-.psevdo-body__part1 p:nth-child(2) {
-  line-height: 20px;
-  text-align: justify;
-  font-size: 15px;
-  padding: 10px 0px;
-}
-.psevdo-body__part1 p:nth-child(3) {
-  text-align: center;
   font-size: 40px;
-  padding: 20px 0;
+  font-family: "Istok Web", sans-serif;
+}
+.pseudo-body__part1 p:nth-child(2) {
+  line-height: 25px;
+  text-align: justify;
+  font-size: 20px;
+  font-family: "Istok Web", sans-serif;
+  margin-bottom: 70px;
+}
+.pseudo-body__part1 p:nth-child(3) {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Istok Web", sans-serif;
+  margin-bottom: 40px;
 }
 
-.psevdo-body__part2 {
+.pseudo-body__part2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.psevdo-body__part2 img:nth-child(1) {
-  border: #000 1px solid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.psevdo-body__space1 {
-  margin: 20px 0px;
+.pseudo-body__space1 {
+  margin: 20px 40px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -116,22 +127,23 @@ body span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 48.5%;
-          flex: 0 0 48.5%;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
 }
-.psevdo-body__space1 img {
+.pseudo-body__space1 img {
   padding: 10px;
 }
-.psevdo-body__space1 p {
+.pseudo-body__space1 p {
   padding: 20px;
   font-size: 20px;
+  font-family: "Istok Web", sans-serif;
 }
 
-.psevdo-body__space2 {
-  margin: 20px 0px;
+.pseudo-body__space2 {
+  margin: 20px 40px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -139,41 +151,100 @@ body span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 48.5%;
-          flex: 0 0 48.5%;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
 }
-.psevdo-body__space2 img {
+.pseudo-body__space2 img {
   padding: 10px;
 }
-.psevdo-body__space2 p {
+.pseudo-body__space2 p {
   padding: 20px;
   font-size: 20px;
+  font-family: "Istok Web", sans-serif;
 }
 
 h2 {
   font-size: 30px;
-  border: #000 1px solid;
   text-align: center;
   line-height: 50px;
+  font-family: "Istok Web", sans-serif;
+  margin: 60px 0px 30px 0px;
 }
 
-.psevdo-body__part3 {
+.pseudo-body__part3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
 }
-.psevdo-body__part3 div {
+.pseudo-body__part3 div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
   text-align: center;
-  margin: 20px 10px;
-  padding: 10px;
-  border: black 1px solid;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+  margin: 20px 43px;
+  padding: 0px 10px;
+  font-family: "Istok Web", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+.pseudo-body__part3 img {
+  height: 140px;
+  width: 140px;
+  margin: 10px;
 }
 
-.psevdo-footer__banner {
+.pseudo-body__part4 {
+  font-family: "Istok Web", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.list {
+  margin: 20px;
+}
+.list li {
+  margin-bottom: 30px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+.pseudo-footer {
+  font-family: "Istok Web", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  padding-bottom: 10px;
+}
+
+.pseudo-footer__banner {
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+  margin: 20px 0px;
+  font-size: 20px;
   background-color: #fef84c;
   border-radius: 10px;
   outline: hidden;
+  font-family: "Istok Web", sans-serif;
+}
+.pseudo-footer__banner p {
+  text-align: center;
+}
+.pseudo-footer__banner a {
+  display: block;
+  text-align: center;
 }
