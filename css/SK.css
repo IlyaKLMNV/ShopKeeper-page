@@ -1,3 +1,22 @@
+@media (max-width: 800px) {
+  .pseudo-body__part3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 650px) {
+  .pseudo-body__part2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .pseudo-body__part2 p {
+    font-size: 10px;
+  }
+}
 body {
   background-color: #f7fcff;
 }
@@ -14,35 +33,6 @@ body span {
 }
 
 .pseudo-header__top-part {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.pseudo-header__top-part img {
-  height: 50px;
-  width: 50px;
-  margin-left: 10px;
-}
-.pseudo-header__top-part a {
-  font-size: 20px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
-  border-radius: 10px;
-  outline: hidden;
-  padding: 10px 20px;
-  background: #4a8cea;
-  color: white;
-  margin: 0px 10px 0px 20px;
-}
-
-.pseudo-header__bottom-part {
   background: url("../img/box-main.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -52,7 +42,7 @@ body span {
   padding: 0px 10%;
   margin: 0px 0 30px 0px;
 }
-.pseudo-header__bottom-part ::after {
+.pseudo-header__top-part ::after {
   position: absolute;
   content: "";
   top: 0;
@@ -60,53 +50,91 @@ body span {
   right: 0;
   bottom: 0;
   background-color: #000;
-  opacity: 0.2;
+  opacity: 0.5;
   z-index: -1;
 }
-.pseudo-header__bottom-part div:nth-child(1) {
-  padding-top: 10px;
-  font-size: 25px;
-  color: white;
-  line-height: 30px;
-  font-family: "Comfortaa", cursive;
-}
-.pseudo-header__bottom-part div:nth-child(2) {
+.pseudo-header__top-part div:nth-child(1) {
+  padding: 10px 0px 80px 0px;
+  text-align: center;
+  font-family: "Sawarabi Gothic";
   font-size: 50px;
-  color: white;
+  color: #fff;
   font-weight: 700;
-  font-family: "Sawarabi Gothic", sans-serif;
   line-height: 60px;
-  letter-spacing: 0px;
-  padding: 10px 0;
-}
-.pseudo-header__bottom-part div:nth-child(3) {
-  padding-bottom: 10px;
-  font-size: 20px;
-  color: white;
-  font-family: "Nunito", sans-serif;
-  line-height: 30px;
-  letter-spacing: 1px;
+  letter-spacing: 0;
+  /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
 }
 
+.pseudo-header__bottom-part_counter {
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+}
+.pseudo-header__bottom-part_counter div {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  -webkit-transform: translate(0%, -70px);
+          transform: translate(0%, -70px);
+  left: 50%;
+  z-index: 10;
+  -webkit-animation-name: counter;
+          animation-name: counter;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.pseudo-header__bottom-part_counter div:nth-child(1) {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+@-webkit-keyframes counter {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes counter {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
 .pseudo-body__part1 p:nth-child(1) {
   padding-bottom: 20px;
   text-align: center;
-  line-height: 30px;
+  font-family: "Istok Web";
   font-size: 40px;
-  font-family: "Istok Web", sans-serif;
+  color: #000;
+  font-weight: 100;
+  line-height: 30px;
+  letter-spacing: 0;
+  /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
 }
 .pseudo-body__part1 p:nth-child(2) {
-  line-height: 25px;
-  text-align: justify;
-  font-size: 20px;
-  font-family: "Istok Web", sans-serif;
   margin-bottom: 70px;
+  text-align: justify;
+  font-family: "Istok Web";
+  font-size: 20px;
+  color: #000;
+  font-weight: 100;
+  line-height: 25px;
+  letter-spacing: 0;
+  /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
 }
 .pseudo-body__part1 p:nth-child(3) {
   text-align: center;
-  font-size: 30px;
-  font-family: "Istok Web", sans-serif;
   margin-bottom: 40px;
+  font-family: "Istok Web";
+  font-size: 30px;
+  color: #000;
+  font-weight: 100;
+  line-height: 25px;
+  letter-spacing: 0;
+  /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
 }
 
 .pseudo-body__part2 {
@@ -138,8 +166,13 @@ body span {
 }
 .pseudo-body__space1 p {
   padding: 20px;
+  font-family: "Istok Web";
   font-size: 20px;
-  font-family: "Istok Web", sans-serif;
+  color: #000;
+  font-weight: 100;
+  line-height: 25px;
+  letter-spacing: 0;
+  /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
 }
 
 .pseudo-body__space2 {
@@ -162,16 +195,25 @@ body span {
 }
 .pseudo-body__space2 p {
   padding: 20px;
+  font-family: "Istok Web";
   font-size: 20px;
-  font-family: "Istok Web", sans-serif;
+  color: #000;
+  font-weight: 100;
+  line-height: 25px;
+  letter-spacing: 0;
+  /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
 }
 
 h2 {
-  font-size: 30px;
   text-align: center;
-  line-height: 50px;
-  font-family: "Istok Web", sans-serif;
   margin: 60px 0px 30px 0px;
+  font-family: "Istok Web";
+  font-size: 30px;
+  color: #000;
+  font-weight: 100;
+  line-height: 50px;
+  letter-spacing: 0;
+  /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
 }
 
 .pseudo-body__part3 {
@@ -193,9 +235,13 @@ h2 {
           box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
   margin: 20px 43px;
   padding: 0px 10px;
-  font-family: "Istok Web", sans-serif;
+  font-family: "Istok Web";
   font-size: 16px;
+  color: #000;
+  font-weight: 100;
   line-height: 20px;
+  letter-spacing: 0;
+  /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
 }
 .pseudo-body__part3 img {
   height: 140px;
@@ -204,9 +250,13 @@ h2 {
 }
 
 .pseudo-body__part4 {
-  font-family: "Istok Web", sans-serif;
+  font-family: "Istok Web";
   font-size: 20px;
+  color: #000;
+  font-weight: 100;
   line-height: 24px;
+  letter-spacing: 0;
+  /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
 }
 
 .list {
@@ -218,16 +268,25 @@ h2 {
 
 h3 {
   text-align: center;
-  font-size: 30px;
-  font-weight: 100;
   margin-bottom: 20px;
+  font-family: "Istok Web";
+  font-size: 30px;
+  color: #000;
+  font-weight: 100;
+  line-height: 25px;
+  letter-spacing: 0;
+  /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
 }
 
 .pseudo-footer {
-  font-family: "Istok Web", sans-serif;
-  font-size: 20px;
-  line-height: 30px;
   padding-bottom: 10px;
+  font-family: "Istok Web";
+  font-size: 20px;
+  color: #000;
+  font-weight: 100;
+  line-height: 30px;
+  letter-spacing: 0;
+  /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
 }
 
 .pseudo-footer__banner {
@@ -235,11 +294,16 @@ h3 {
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
   margin: 20px 0px;
-  font-size: 20px;
   background-color: #fef84c;
   border-radius: 10px;
   outline: hidden;
-  font-family: "Istok Web", sans-serif;
+  font-family: "Istok Web";
+  font-size: 20px;
+  color: #000;
+  font-weight: 100;
+  line-height: 25px;
+  letter-spacing: 0;
+  /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
 }
 .pseudo-footer__banner p {
   text-align: center;
