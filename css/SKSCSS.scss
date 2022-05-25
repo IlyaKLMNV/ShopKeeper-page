@@ -28,21 +28,6 @@ body{
     position:relative;
     left: 50%;
 }
-// .pseudo-header__top-part {
-//         img{height: 50px;
-//             width: 50px;
-//             position: absolute;
-//             z-index: 50;
-//         }
-//         a{font-size: 20px;
-//             flex:1 0 50%;
-//             border-radius: 10px;
-//             outline: hidden;
-//             padding: 10px 20px;
-//             background: #4a8cea;
-//             color:rgb(255, 255, 255);
-//             margin: 0px 10px 0px 20px;} 
-// }
 .pseudo-header__top-part {
     background: url('../img/box-main.jpg');
     background-repeat: no-repeat;
@@ -50,7 +35,7 @@ body{
     background-position: center center;
     position: relative;
     z-index: 1;
-    padding: 0px 10%;
+    padding: 40px 10%;
     margin: 0px 0 30px 0px;
     ::after{
         position: absolute;
@@ -60,76 +45,94 @@ body{
         right: 0;
         bottom: 0;
         background-color: #000;
-        opacity: 0.5;
+        opacity: 0.2;
         z-index: -1;
     }
         div:nth-child(1){
-            padding: 10px 0px 80px 0px;
+            padding: 10px 0px 0px 0px;
             text-align: center;
             @include fontz('Sawarabi Gothic',50px,#fff,700,60px,0); /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
         }
-}
-
-    
-.pseudo-header__bottom-part_counter{
+}    
+.pseudo-header__bottom-part_counter{   
     text-align: center;
-    margin:0px 0px 30px 0px;
+    justify-content: center;
+    padding: 0px;
+    margin-bottom: 80px;
+    // position: relative;
+    @include fontz('Sawarabi Gothic',30px,rgb(0, 0, 0),400,40px,0); /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
+    p{
+        color: rgb(0, 0, 0);
+        @include fontz('Sawarabi Gothic',30px,rgb(0, 0, 0),400,40px,0); /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
+        // margin: 50px;
+        // padding-bottom: 50px;
+    }
     div{
-        font-size: 30px;
-        font-weight: 700;
-        color: rgb(255, 255, 255);
+        padding-bottom: 50px;
+        color: rgb(0, 0, 0);
         position: absolute;
-        transform: translate(0%, -70px);
+        transform: translate(-50%,0px);
         left:50%;
         z-index: 10;
         animation-name: counter;
         animation-fill-mode: forwards;
-        // animation-iteration-count: infinite;
+        visibility: hidden;
+        @include fontz('Sawarabi Gothic',30px,rgb(0, 0, 0),400,40px,0); /*font-family(1),font-size(2),color(3),font-weight(4),line-height(5),letter-spacing(6)*/
     }
-
-    div:nth-child(1){
+    div:nth-child(2){
         animation-duration: 1s;
+        animation-delay: 0s; 
     }
-    div:nth-child(2){}
-    div:nth-child(3){}
-    div:nth-child(4){}
-    div:nth-child(5){}
-    div:nth-child(6){}
-    div:nth-child(7){}
-    div:nth-child(8){}
-    div:nth-child(9){}
-    div:nth-child(10){}
-
-//     div:nth-child(2){
-//         font-size: 30px;
-//         color: #000;
-//         position: absolute;
-//         transform: translate(0%, -71px);
-//         left:50%;
-//         z-index: 10;
-//         // animation-name: counter;
-//         // animation-duration: 2s;
-//         // animation-iteration-count: infinite;
-//     }
+    div:nth-child(3){
+        animation-delay: 1s;
+        animation-duration: 5s;
+    }
+    div:nth-child(4){
+        animation-duration: 6s;
+        animation-delay: 6s;
+    }
+    div:nth-child(5){
+        animation-duration: 10s;
+        animation-delay: 12s;
+    }
+    div:nth-child(6){
+        animation-duration: 1s;
+        animation-delay: 22s;
+    }
+    div:nth-child(7){
+        animation-duration: 5s;
+        animation-delay: 23s;
+    }
+    div:nth-child(8){
+        animation-duration: 10s;
+        animation-delay: 28s;
+    }
+    div:nth-child(9){
+        animation-duration: 4s;
+        animation-delay: 38s;
+    }
+    div:nth-child(10){
+        animation-duration: 1s;
+        animation-delay: 42s;
+    }
+    div:nth-child(11){
+        animation-duration: 1s;
+        animation-delay: 43s;
+        animation-iteration-count: infinite;
+    }
 }
-
 @keyframes counter{
-    
     0%{
-        // color: #000;
-        // opacity: 0;
-        // color: #000;
+        visibility: hidden;
+    }
+    50%{
         visibility: visible;
-    }   
+    }
+       
     100%{
-        // color: rgb(255, 255, 255);
-        // opacity: 1;
-        // color: #fff;
         visibility: hidden;
     }          
 }
-
-
 .pseudo-body__part1 {
     p:nth-child(1){
         padding-bottom: 20px;
